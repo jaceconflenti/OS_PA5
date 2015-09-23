@@ -1,0 +1,17 @@
+./fusexmp pass /home/user/mirror/ /home/user/mount/
+
+create:
+touch sample.txt
+cat sample.txt
+
+read:
+cat sample.txt
+
+write:
+echo "sample text message" > sample.txt
+
+fusermount -u /home/user/mount
+
+
+/home/user/mirror is the folder that is mirrored, can r/w decrypted but cannot r/w encrypted
+/home/user/mount is the mountpoint, can r/w decrypted and encrypted
